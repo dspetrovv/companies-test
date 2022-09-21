@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ModalWindow from "./components/ModalWindow";
+import TableCompany from "./components/tables/TableCompany";
+import TableEmployee from "./components/tables/TableEmployee";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ModalWindow />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ maxWidth: '1024px', width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+          <TableCompany />
+          <TableEmployee />
+        </div>
+      </div>
     </div>
   );
 }

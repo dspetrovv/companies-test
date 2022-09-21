@@ -1,0 +1,7 @@
+.btn,
+button {
+  @include btn;
+}
+input {
+  @include input;
+}

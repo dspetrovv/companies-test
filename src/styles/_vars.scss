@@ -1,0 +1,70 @@
+@mixin closeIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    margin: auto 0;
+    background-color: black;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+@mixin fullTableBlock {
+  width: 100% !important;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+@mixin input {
+  padding: 5px;
+  margin: 5px 0 3px;
+  text-align: center;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  transition: border-bottom-color 0.2s ease-in-out;
+  &:active,
+  &:focus {
+    border-bottom-color: black;
+  }
+  &:hover:not(:focus) {
+    border-bottom-color: black;
+  }
+}
+@mixin btn {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 7px 25px 6px;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 2px 1px black;
+  }
+  &_disabled {
+    cursor: default;
+    border-color: #d4d9e3;
+    background-color: #d4d9e3;
+    color: #707070;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
